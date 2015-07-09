@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		9507D0D91B4E383500D4BF29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507D0D81B4E383500D4BF29 /* main.m */; };
 		9507D0DC1B4E383500D4BF29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507D0DB1B4E383500D4BF29 /* AppDelegate.m */; };
-		9507D0DF1B4E383500D4BF29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507D0DE1B4E383500D4BF29 /* ViewController.m */; };
+		9507D0DF1B4E383500D4BF29 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507D0DE1B4E383500D4BF29 /* SearchViewController.m */; };
 		9507D0E21B4E383500D4BF29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9507D0E01B4E383500D4BF29 /* Main.storyboard */; };
 		9507D0E41B4E383500D4BF29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9507D0E31B4E383500D4BF29 /* Images.xcassets */; };
 		9507D0E71B4E383500D4BF29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9507D0E51B4E383500D4BF29 /* LaunchScreen.xib */; };
 		9507D0F31B4E383500D4BF29 /* PdfSearcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507D0F21B4E383500D4BF29 /* PdfSearcherTests.m */; };
+		95E64B8B1B4E3D96002B1C27 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E64B8A1B4E3D96002B1C27 /* ResultTableViewCell.xib */; };
+		95E64B8E1B4E3DC3002B1C27 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E64B8D1B4E3DC3002B1C27 /* ResultTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,17 @@
 		9507D0D81B4E383500D4BF29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9507D0DA1B4E383500D4BF29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9507D0DB1B4E383500D4BF29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9507D0DD1B4E383500D4BF29 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9507D0DE1B4E383500D4BF29 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9507D0DD1B4E383500D4BF29 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		9507D0DE1B4E383500D4BF29 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		9507D0E11B4E383500D4BF29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9507D0E31B4E383500D4BF29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9507D0E61B4E383500D4BF29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9507D0EC1B4E383500D4BF29 /* PdfSearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PdfSearcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9507D0F11B4E383500D4BF29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9507D0F21B4E383500D4BF29 /* PdfSearcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PdfSearcherTests.m; sourceTree = "<group>"; };
+		95E64B8A1B4E3D96002B1C27 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		95E64B8C1B4E3DC3002B1C27 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
+		95E64B8D1B4E3DC3002B1C27 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +88,15 @@
 			children = (
 				9507D0DA1B4E383500D4BF29 /* AppDelegate.h */,
 				9507D0DB1B4E383500D4BF29 /* AppDelegate.m */,
-				9507D0DD1B4E383500D4BF29 /* ViewController.h */,
-				9507D0DE1B4E383500D4BF29 /* ViewController.m */,
+				9507D0DD1B4E383500D4BF29 /* SearchViewController.h */,
+				9507D0DE1B4E383500D4BF29 /* SearchViewController.m */,
 				9507D0E01B4E383500D4BF29 /* Main.storyboard */,
 				9507D0E31B4E383500D4BF29 /* Images.xcassets */,
 				9507D0E51B4E383500D4BF29 /* LaunchScreen.xib */,
 				9507D0D61B4E383500D4BF29 /* Supporting Files */,
+				95E64B8A1B4E3D96002B1C27 /* ResultTableViewCell.xib */,
+				95E64B8C1B4E3DC3002B1C27 /* ResultTableViewCell.h */,
+				95E64B8D1B4E3DC3002B1C27 /* ResultTableViewCell.m */,
 			);
 			path = PdfSearcher;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					9507D0D21B4E383500D4BF29 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 7L7NYBWZ63;
 					};
 					9507D0EB1B4E383500D4BF29 = {
 						CreatedOnToolsVersion = 6.4;
@@ -201,6 +210,7 @@
 			files = (
 				9507D0E21B4E383500D4BF29 /* Main.storyboard in Resources */,
 				9507D0E71B4E383500D4BF29 /* LaunchScreen.xib in Resources */,
+				95E64B8B1B4E3D96002B1C27 /* ResultTableViewCell.xib in Resources */,
 				9507D0E41B4E383500D4BF29 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9507D0DF1B4E383500D4BF29 /* ViewController.m in Sources */,
+				9507D0DF1B4E383500D4BF29 /* SearchViewController.m in Sources */,
 				9507D0DC1B4E383500D4BF29 /* AppDelegate.m in Sources */,
+				95E64B8E1B4E3DC3002B1C27 /* ResultTableViewCell.m in Sources */,
 				9507D0D91B4E383500D4BF29 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,9 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PdfSearcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,9 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PdfSearcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,6 +433,7 @@
 				9507D0F81B4E383500D4BF29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9507D0F91B4E383500D4BF29 /* Build configuration list for PBXNativeTarget "PdfSearcherTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +442,7 @@
 				9507D0FB1B4E383500D4BF29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

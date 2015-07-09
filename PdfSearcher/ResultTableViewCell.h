@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ResultTableViewCell.h
 //  PdfSearcher
 //
 //  Created by WangXiaofei on 15/7/9.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ResultTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 
 @end
-

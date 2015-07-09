@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>79D06C83-C077-435E-AFF8-85AE232AD925</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PdfSearcher</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A1120FBD6CFD121EBE264D184C0C245FC1A17E2A</key>
+		<string>https://github.com/wangxf123456/PdfSearcher</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PdfSearcher.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A1120FBD6CFD121EBE264D184C0C245FC1A17E2A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wangxf123456/PdfSearcher</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A1120FBD6CFD121EBE264D184C0C245FC1A17E2A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A1120FBD6CFD121EBE264D184C0C245FC1A17E2A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PdfSearcher</string>
+		</dict>
+	</array>
+</dict>
+</plist>
