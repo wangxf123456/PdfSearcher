@@ -7,7 +7,9 @@
 //
 
 #import "SearchViewController.h"
-#import "ResultTableViewCell.h"
+#import "ResultCell.h"
+#import "LoadingCell.h"
+#import "NothingFoundCell.h"
 #import "GTMOAuth2ViewControllerTouch.h"
 #import "GTLDrive.h"
 #import "AFJSONRequestOperation.h"
@@ -16,7 +18,9 @@
 
 #import "WebViewController.h"
 
-static NSString *const ResultCellIdentifier = @"ResultTableViewCell";
+static NSString *const ResultCellIdentifier = @"ResultCell";
+static NSString *const LoadingCellIdentifier = @"LoadingCell";
+static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
 
 static NSString *const searchAPIKey = @"AIzaSyDMXvzKqDq5mUUlnPxotHO0up1Bcp8QmCo";
 static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
@@ -31,6 +35,7 @@ static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
 @implementation SearchViewController {
     NSMutableArray *searchResults;
     NSOperationQueue *queue;
+    BOOL isLoading;
 }
 
 - (void)viewDidLoad {
@@ -41,12 +46,15 @@ static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
     
     UINib *cellNib = [UINib nibWithNibName:ResultCellIdentifier  bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:ResultCellIdentifier];
+    cellNib = [UINib nibWithNibName:LoadingCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:LoadingCellIdentifier];
+    cellNib = [UINib nibWithNibName:NothingFoundCellIdentifier  bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:NothingFoundCellIdentifier];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    NSLog(@"gg");
     [self performSearch];
 }
 
@@ -58,6 +66,7 @@ static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
         [queue cancelAllOperations];
         [[NSURLCache sharedURLCache] removeAllCachedResponses];
         
+        isLoading = YES;
         [self.tableView reloadData];
         searchResults = [NSMutableArray arrayWithCapacity:10];
         NSURL *url = [self urlWithSearchText:self.searchBar.text];
@@ -66,10 +75,12 @@ static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
                                              JSONRequestOperationWithRequest:request
                                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                  [self parseDictionary:JSON];
+                                                 isLoading = NO;
                                                  [self.tableView reloadData];
                                                  
                                              } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                 NSLog(@"error %@, %@", error, JSON);
+                                                 isLoading = NO;
+                                                 [self.tableView reloadData];
                                              }];
         [queue addOperation:operation];
         operation.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", nil];
@@ -82,7 +93,6 @@ static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
     NSString *escapedSearchText = [[NSString stringWithFormat:@"%@%@", searchText, temp]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *urlString = [NSString stringWithFormat:@"https://www.googleapis.com/customsearch/v1?q=%@&key=%@&cx=%@", escapedSearchText, searchAPIKey, searchEngineKey];
     NSURL *url = [NSURL URLWithString:urlString];
-    NSLog(@"%@", url);
     return url;
 }
 
@@ -106,15 +116,31 @@ static NSString *const searchEngineKey = @"017756918084100534407:khndsvwgsrk";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [searchResults count];
+    if (isLoading) {
+        return 1;
+    } else if (searchResults == nil) {
+        return 0;
+    } else if ([searchResults count] == 0){
+        return 1;
+    } else {
+        return [searchResults count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ResultTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];
-    Record *record = [searchResults objectAtIndex:indexPath.row];
-    cell.nameLabel.text = record.name;
-    cell.link = record.link;
-    return cell;
+    if (isLoading) {
+        LoadingCell *cell = (LoadingCell *)[tableView dequeueReusableCellWithIdentifier:LoadingCellIdentifier];
+        return cell;
+    } else if ([searchResults count] == 0) {
+        NothingFoundCell *cell = (NothingFoundCell *)[tableView dequeueReusableCellWithIdentifier:NothingFoundCellIdentifier];
+        return cell;
+    } else {
+        ResultCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];
+        Record *record = [searchResults objectAtIndex:indexPath.row];
+        cell.nameLabel.text = record.name;
+        cell.link = record.link;
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

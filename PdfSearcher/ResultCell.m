@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 WangXiaofei. All rights reserved.
 //
 
-#import "ResultTableViewCell.h"
+#import "ResultCell.h"
 
-@implementation ResultTableViewCell
+@implementation ResultCell
 
 - (void)awakeFromNib {
     // Initialization code

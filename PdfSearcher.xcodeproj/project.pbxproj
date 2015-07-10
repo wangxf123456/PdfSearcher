@@ -26,8 +26,12 @@
 		957CA4A81B4F7F490096CA8F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CA49E1B4F7F490096CA8F /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		957CA4AB1B4F91080096CA8F /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CA4AA1B4F91080096CA8F /* Record.m */; };
 		957CA4AE1B4F99F00096CA8F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CA4AD1B4F99F00096CA8F /* WebViewController.m */; };
-		95E64B8B1B4E3D96002B1C27 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E64B8A1B4E3D96002B1C27 /* ResultTableViewCell.xib */; };
-		95E64B8E1B4E3DC3002B1C27 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E64B8D1B4E3DC3002B1C27 /* ResultTableViewCell.m */; };
+		957CA4B01B4FA32B0096CA8F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 957CA4AF1B4FA32B0096CA8F /* LoadingCell.xib */; };
+		957CA4B31B4FA34B0096CA8F /* LoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CA4B21B4FA34B0096CA8F /* LoadingCell.m */; };
+		957CA4B71B4FA4820096CA8F /* NothingFoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CA4B51B4FA4820096CA8F /* NothingFoundCell.m */; };
+		957CA4B81B4FA4820096CA8F /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 957CA4B61B4FA4820096CA8F /* NothingFoundCell.xib */; };
+		95E64B8B1B4E3D96002B1C27 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E64B8A1B4E3D96002B1C27 /* ResultCell.xib */; };
+		95E64B8E1B4E3DC3002B1C27 /* ResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E64B8D1B4E3DC3002B1C27 /* ResultCell.m */; };
 		D68FE65D8C2B4D66ABBB899A /* libPods-PdfSearcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA36DD772BDE4835B6A7D927 /* libPods-PdfSearcher.a */; };
 /* End PBXBuildFile section */
 
@@ -82,9 +86,15 @@
 		957CA4AA1B4F91080096CA8F /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 		957CA4AC1B4F99F00096CA8F /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		957CA4AD1B4F99F00096CA8F /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		95E64B8A1B4E3D96002B1C27 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
-		95E64B8C1B4E3DC3002B1C27 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
-		95E64B8D1B4E3DC3002B1C27 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
+		957CA4AF1B4FA32B0096CA8F /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		957CA4B11B4FA34B0096CA8F /* LoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingCell.h; sourceTree = "<group>"; };
+		957CA4B21B4FA34B0096CA8F /* LoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingCell.m; sourceTree = "<group>"; };
+		957CA4B41B4FA4820096CA8F /* NothingFoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NothingFoundCell.h; sourceTree = "<group>"; };
+		957CA4B51B4FA4820096CA8F /* NothingFoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NothingFoundCell.m; sourceTree = "<group>"; };
+		957CA4B61B4FA4820096CA8F /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		95E64B8A1B4E3D96002B1C27 /* ResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
+		95E64B8C1B4E3DC3002B1C27 /* ResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCell.h; sourceTree = "<group>"; };
+		95E64B8D1B4E3DC3002B1C27 /* ResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCell.m; sourceTree = "<group>"; };
 		EA36DD772BDE4835B6A7D927 /* libPods-PdfSearcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PdfSearcher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,13 +149,19 @@
 				9507D0E31B4E383500D4BF29 /* Images.xcassets */,
 				9507D0E51B4E383500D4BF29 /* LaunchScreen.xib */,
 				9507D0D61B4E383500D4BF29 /* Supporting Files */,
-				95E64B8A1B4E3D96002B1C27 /* ResultTableViewCell.xib */,
-				95E64B8C1B4E3DC3002B1C27 /* ResultTableViewCell.h */,
-				95E64B8D1B4E3DC3002B1C27 /* ResultTableViewCell.m */,
+				95E64B8A1B4E3D96002B1C27 /* ResultCell.xib */,
+				95E64B8C1B4E3DC3002B1C27 /* ResultCell.h */,
+				95E64B8D1B4E3DC3002B1C27 /* ResultCell.m */,
 				957CA4A91B4F91080096CA8F /* Record.h */,
 				957CA4AA1B4F91080096CA8F /* Record.m */,
 				957CA4AC1B4F99F00096CA8F /* WebViewController.h */,
 				957CA4AD1B4F99F00096CA8F /* WebViewController.m */,
+				957CA4AF1B4FA32B0096CA8F /* LoadingCell.xib */,
+				957CA4B11B4FA34B0096CA8F /* LoadingCell.h */,
+				957CA4B21B4FA34B0096CA8F /* LoadingCell.m */,
+				957CA4B41B4FA4820096CA8F /* NothingFoundCell.h */,
+				957CA4B51B4FA4820096CA8F /* NothingFoundCell.m */,
+				957CA4B61B4FA4820096CA8F /* NothingFoundCell.xib */,
 			);
 			path = PdfSearcher;
 			sourceTree = "<group>";
@@ -298,7 +314,9 @@
 			files = (
 				9507D0E21B4E383500D4BF29 /* Main.storyboard in Resources */,
 				9507D0E71B4E383500D4BF29 /* LaunchScreen.xib in Resources */,
-				95E64B8B1B4E3D96002B1C27 /* ResultTableViewCell.xib in Resources */,
+				957CA4B81B4FA4820096CA8F /* NothingFoundCell.xib in Resources */,
+				95E64B8B1B4E3D96002B1C27 /* ResultCell.xib in Resources */,
+				957CA4B01B4FA32B0096CA8F /* LoadingCell.xib in Resources */,
 				9507D0E41B4E383500D4BF29 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				957CA4A21B4F7F490096CA8F /* AFImageRequestOperation.m in Sources */,
+				957CA4B31B4FA34B0096CA8F /* LoadingCell.m in Sources */,
+				957CA4B71B4FA4820096CA8F /* NothingFoundCell.m in Sources */,
 				957CA4A01B4F7F490096CA8F /* AFHTTPRequestOperation.m in Sources */,
 				957CA49F1B4F7F490096CA8F /* AFHTTPClient.m in Sources */,
 				957CA4A71B4F7F490096CA8F /* AFXMLRequestOperation.m in Sources */,
@@ -362,7 +382,7 @@
 				957CA4A31B4F7F490096CA8F /* AFJSONRequestOperation.m in Sources */,
 				957CA4AB1B4F91080096CA8F /* Record.m in Sources */,
 				957CA4AE1B4F99F00096CA8F /* WebViewController.m in Sources */,
-				95E64B8E1B4E3DC3002B1C27 /* ResultTableViewCell.m in Sources */,
+				95E64B8E1B4E3DC3002B1C27 /* ResultCell.m in Sources */,
 				957CA4A51B4F7F490096CA8F /* AFPropertyListRequestOperation.m in Sources */,
 				9507D0D91B4E383500D4BF29 /* main.m in Sources */,
 				957CA4A11B4F7F490096CA8F /* AFImageCache.m in Sources */,

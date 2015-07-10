@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Record.h"
 
-@interface ResultTableViewCell : UITableViewCell
+@interface ResultCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) NSURL *link;
